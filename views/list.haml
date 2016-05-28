@@ -1,0 +1,5 @@
+%form{ :action => "/save", :method => "post"}
+	%select{ :multiple => "true", :name => "files[]"}
+		- @files.each do |file|
+			%option{:value => file.downcase} #{file}
+	%input{:type => "submit", "value" => "send"}
