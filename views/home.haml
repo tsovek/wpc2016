@@ -1,5 +1,10 @@
+.navbar
+  %a{ :href => "/"} upload new photo
+  %a{ :href => "/list"} create pdf
+%br 
 %form{ :action => "/upload", :method => "post", :multipart => "true", :enctype => "multipart/form-data"}
   %label:{:for => "file"} File:
   %input{:type => "file", "name" => "file"}
-  %input{:type => "submit", "value" => "send"}
+  %br
+  %input{:type => "submit", "value" => "upload"}
   

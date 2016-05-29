@@ -1,5 +1,14 @@
+.navbar
+	%a{ :href => "/"} upload new photo
+	%a{ :href => "/list"} create pdf
+%br 
 %form{ :action => "/save", :method => "post"}
+	%label:{:for => "name"} Album name:
+	%input{:type => "text", :name => "file_name"}
+	%br
+	%label:{:for => "files[]"} Select photos:
 	%select{ :multiple => "true", :name => "files[]"}
 		- @files.each do |file|
 			%option{:value => file.downcase} #{file.partition('/').last}
-	%input{:type => "submit", "value" => "send"}
+	%br
+	%input{:type => "submit", "value" => "create"}
