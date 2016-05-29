@@ -2,14 +2,19 @@
   %head
     %title wpc2016
     %meta{:charset => "utf-8"}
-  %body
-    .navbar-header
-      %a{ :href => "/"} upload new photo
-      %a{ :href => "/list"} create pdf
+    %link{:href => "/css/bootstrap.css", :rel => "stylesheet"}
+  %body{:style => ("padding-top :70px; padding-left :50px; padding-right :50px")}
+    .navbar.navbar-fixed-top
+      .container-fluid
+        %ul.nav.nav-tabs
+          %li.presentation.active
+            %a{ :href => "/"} Upload new photo
+          %li.presentation
+            %a{ :href => "/list"} Create PDF
     %br       
     %form{ :action => "/upload", :method => "post", :multipart => "true", :enctype => "multipart/form-data"}
-    %label:{:for => "file"} File:
-    %input{:type => "file", "name" => "file"}
+    %label{:for => "file"} File:
+    %input.form-control{:type => "file", "name" => "file"}
     %br
-    %input{:type => "submit", "value" => "upload"}
+    %input.btn.btn-default{:type => "submit", "value" => "Upload"}
 
