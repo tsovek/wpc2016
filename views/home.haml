@@ -1,10 +1,15 @@
-.navbar
-  %a{ :href => "/"} upload new photo
-  %a{ :href => "/list"} create pdf
-%br 
-%form{ :action => "/upload", :method => "post", :multipart => "true", :enctype => "multipart/form-data"}
-  %label:{:for => "file"} File:
-  %input{:type => "file", "name" => "file"}
-  %br
-  %input{:type => "submit", "value" => "upload"}
-  
+%html
+  %head
+    %title wpc2016
+    %meta{:charset => "utf-8"}
+  %body
+    .navbar-header
+      %a{ :href => "/"} upload new photo
+      %a{ :href => "/list"} create pdf
+    %br       
+    %form{ :action => "/upload", :method => "post", :multipart => "true", :enctype => "multipart/form-data"}
+    %label:{:for => "file"} File:
+    %input{:type => "file", "name" => "file"}
+    %br
+    %input{:type => "submit", "value" => "upload"}
+
