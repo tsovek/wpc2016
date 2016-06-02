@@ -3,5 +3,5 @@ require 'bundler'
 
 Bundler.require
 
-require './WPC'
-run WpcBase
+require './app'
+run Sinatra::Base
