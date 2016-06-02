@@ -3,5 +3,5 @@ require 'bundler'
 
 Bundler.require
 
-require './WPC'
+require './app'
 run WpcBase
